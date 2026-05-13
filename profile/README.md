@@ -36,6 +36,15 @@ A continuación, detallamos los principales módulos de nuestro sistema. *(Haz c
   - [`/portal-frontend-registration`](https://github.com/mondragon-x/portal-frontend-registration) - Aplicacion que contiene el frontend del portal en fase de registro.
   - [`/portal-backend`](https://github.com/mondragon-x/portal-backend) - Aplicacion que contiene el backend del portal
 
+### KIT 2: Gemelo Digital AAS
+- **Descripción:** Pack de instalación del Conector EDC, el Digital Twin Registry (DTR) y la plataforma BaSyx AAS. Permite la gestión de Asset Administration Shells, el registro de gemelos digitales y la conectividad al dataspace para el intercambio de datos entre participantes.
+- **Repositorio Helm:** [`/kit-gdaas`](https://github.com/mondragon-x/kit-gdaas)
+- **Componentes clave:**
+  - [`/basyx-all`](https://github.com/mondragon-x/kit-gdaas/tree/main/charts/kit-edc-basyx/charts/basyx-all) - Plataforma Eclipse BaSyx v2 AAS (AAS Environment, AAS Registry, Submodel Registry, AAS Discovery, Dashboard API, Web UI, MongoDB, InfluxDB)
+  - [`/tx-data-provider`](https://github.com/mondragon-x/kit-gdaas/tree/main/vendor/tx-data-provider) - Conector Tractus-X EDC con HashiCorp Vault y PostgreSQL
+  - [`/digital-twin-registry`](https://github.com/eclipse-tractusx/sldt-digital-twin-registry) - Tractus-X Digital Twin Registry (DTR)
+  - [`/influxdb`](https://github.com/mondragon-x/kit-gdaas/tree/main/charts/kit-edc-basyx/charts/basyx-all/templates) - Base de datos de series temporales InfluxDB para telemetría de BaSyx
+
 ---
 
 ## Stack Tecnológico
