@@ -45,6 +45,12 @@ A continuación, detallamos los principales módulos de nuestro sistema. *(Haz c
   - [`/digital-twin-registry`](https://github.com/eclipse-tractusx/sldt-digital-twin-registry) - Tractus-X Digital Twin Registry (DTR)
   - [`/influxdb`](https://github.com/mondragon-x/kit-gdaas/tree/main/charts/kit-edc-basyx/charts/basyx-all/templates) - Base de datos de series temporales InfluxDB para telemetría de BaSyx
 
+### KIT 3: Interoperabilidad
+- **Descripción:** KIT orientado a la integración de datos de máquinas industriales, centrado en la ingesta de datos de condición de máquina, su procesamiento como series temporales y su transformación a modelos estandarizados basados en Asset Administration Shell (AAS).
+- **Repositorio Helm:** [`/kit-interoperability`](https://github.com/mondragon-x/kit-interoperability)
+- **Componentes clave:**
+  - **m2aas-wrapper**: Servicio principal encargado de adquirir datos desde distintos conectores y estandarizarlos en una representación homogénea basada en AAS.
+  - (Opcional) Integrable con el [`/kit-gdaas`](https://github.com/mondragon-x/kit-gdaas) para la gestión, persistencia y compartición de gemelos digitales y submodelos en espacios de datos.
 ---
 
 ## Stack Tecnológico
