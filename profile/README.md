@@ -36,7 +36,14 @@ A continuación, detallamos los principales módulos de nuestro sistema. *(Haz c
   - [`/portal-frontend-registration`](https://github.com/mondragon-x/portal-frontend-registration) - Aplicacion que contiene el frontend del portal en fase de registro.
   - [`/portal-backend`](https://github.com/mondragon-x/portal-backend) - Aplicacion que contiene el backend del portal
 
-### KIT 2: Gemelo Digital AAS
+### KIT 2: Interoperabilidad
+- **Descripción:** KIT orientado a la integración de datos de máquinas industriales, centrado en la ingesta de datos de condición de máquina, su procesamiento como series temporales y su transformación a modelos estandarizados basados en Asset Administration Shell (AAS).
+- **Repositorio Helm:** [`/kit-interoperability`](https://github.com/mondragon-x/kit-interoperability)
+- **Componentes clave:**
+  - **m2aas-wrapper**: Servicio principal encargado de adquirir datos desde distintos conectores y estandarizarlos en una representación homogénea basada en AAS.
+  - (Opcional) Integrable con el [`/kit-gdaas`](https://github.com/mondragon-x/kit-gdaas) para la gestión, persistencia y compartición de gemelos digitales y submodelos en espacios de datos.
+
+### KIT 3: Gemelo Digital AAS
 - **Descripción:** Pack de instalación del Conector EDC, el Digital Twin Registry (DTR) y la plataforma BaSyx AAS. Permite la gestión de Asset Administration Shells, el registro de gemelos digitales y la conectividad al dataspace para el intercambio de datos entre participantes.
 - **Repositorio Helm:** [`/kit-gdaas`](https://github.com/mondragon-x/kit-gdaas)
 - **Componentes clave:**
@@ -44,13 +51,6 @@ A continuación, detallamos los principales módulos de nuestro sistema. *(Haz c
   - [`/tx-data-provider`](https://github.com/mondragon-x/kit-gdaas/tree/main/vendor/tx-data-provider) - Conector Tractus-X EDC con HashiCorp Vault y PostgreSQL
   - [`/digital-twin-registry`](https://github.com/eclipse-tractusx/sldt-digital-twin-registry) - Tractus-X Digital Twin Registry (DTR)
   - [`/influxdb`](https://github.com/mondragon-x/kit-gdaas/tree/main/charts/kit-edc-basyx/charts/basyx-all/templates) - Base de datos de series temporales InfluxDB para telemetría de BaSyx
-
-### KIT 3: Interoperabilidad
-- **Descripción:** KIT orientado a la integración de datos de máquinas industriales, centrado en la ingesta de datos de condición de máquina, su procesamiento como series temporales y su transformación a modelos estandarizados basados en Asset Administration Shell (AAS).
-- **Repositorio Helm:** [`/kit-interoperability`](https://github.com/mondragon-x/kit-interoperability)
-- **Componentes clave:**
-  - **m2aas-wrapper**: Servicio principal encargado de adquirir datos desde distintos conectores y estandarizarlos en una representación homogénea basada en AAS.
-  - (Opcional) Integrable con el [`/kit-gdaas`](https://github.com/mondragon-x/kit-gdaas) para la gestión, persistencia y compartición de gemelos digitales y submodelos en espacios de datos.
 ---
 
 ## Stack Tecnológico
