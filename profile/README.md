@@ -51,20 +51,19 @@ A continuación, detallamos los principales módulos de nuestro sistema. *(Haz c
   - [`/tx-data-provider`](https://github.com/mondragon-x/kit-gdaas/tree/main/vendor/tx-data-provider) - Conector Tractus-X EDC con HashiCorp Vault y PostgreSQL
   - [`/digital-twin-registry`](https://github.com/eclipse-tractusx/sldt-digital-twin-registry) - Tractus-X Digital Twin Registry (DTR)
   - [`/influxdb`](https://github.com/mondragon-x/kit-gdaas/tree/main/charts/kit-edc-basyx/charts/basyx-all/templates) - Base de datos de series temporales InfluxDB para telemetría de BaSyx
----
+
 
 ### KIT 4: Federated Learning
 
-**Descripción:** Implementación de Aprendizaje Federado sobre el Espacio de Datos de Mondragon-X, utilizando Eclipse Dataspace Connector (EDC / Tractus-X) como capa de intercambio de modelos y BaSyx como backend de almacenamiento opcional. Sigue principios de Domain Driven Design (DDD) e Inversión de Control (IoC).
+- **Descripción:** Implementación de Aprendizaje Federado sobre el Espacio de Datos de Mondragon-X, utilizando Eclipse Dataspace Connector (EDC / Tractus-X) como capa de intercambio de modelos y BaSyx como backend de almacenamiento opcional. Sigue principios de Domain Driven Design (DDD) e Inversión de Control (IoC).
 
-**Repositorio:** `/data-space-federated-learning`
+- **Repositorio:** `/data-space-federated-learning`
 
-#### Componentes clave
+- **Componentes clave:**
+  - [`/aggregator`](aggregator) — Servicio agregador. Orquesta las rondas de FL: descubre clientes vía catálogo EDC, descarga los modelos entrenados, los agrega (estrategia `weighted_mean`) y publica el modelo global de   vuelta en el espacio de datos. Expone una API FastAPI para monitorización.
+  - [`/client`](client) — Servicio cliente. Entrena un modelo local sobre datos privados, publica los pesos vía EDC y consume los modelos globales publicados por el agregador para continuar el entrenamiento federado.
 
-##### Servicios de Federated Learning
-- [`/aggregator`](aggregator) — Servicio agregador. Orquesta las rondas de FL: descubre clientes vía catálogo EDC, descarga los modelos entrenados, los agrega (estrategia `weighted_mean`) y publica el modelo global de vuelta en el espacio de datos. Expone una API FastAPI para monitorización.
-- [`/client`](client) — Servicio cliente. Entrena un modelo local sobre datos privados, publica los pesos vía EDC y consume los modelos globales publicados por el agregador para continuar el entrenamiento federado.
-
+---
 
 ## Stack Tecnológico
 
