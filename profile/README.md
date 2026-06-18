@@ -57,7 +57,7 @@ A continuación, detallamos los principales módulos de nuestro sistema. *(Haz c
 
 - **Descripción:** Implementación de Aprendizaje Federado sobre el Espacio de Datos de Mondragon-X, utilizando Eclipse Dataspace Connector (EDC / Tractus-X) como capa de intercambio de modelos y BaSyx como backend de almacenamiento opcional. Sigue principios de Domain Driven Design (DDD) e Inversión de Control (IoC).
 
-- **Repositorio:** `/data-space-federated-learning`
+- **Repositorio:** [`/data-space-federated-learning`](https://github.com/mondragon-x/data-space-federated-learning)
 
 - **Componentes clave:**
   - [`/aggregator`](aggregator) — Servicio agregador. Orquesta las rondas de FL: descubre clientes vía catálogo EDC, descarga los modelos entrenados, los agrega (estrategia `weighted_mean`) y publica el modelo global de   vuelta en el espacio de datos. Expone una API FastAPI para monitorización.
