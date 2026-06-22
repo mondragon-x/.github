@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="URL_DE_TU_BANNER_CORPORATIVO.png" alt="MONDRAGON-X" width="100%" />
+  <img src="https://media.licdn.com/dms/image/v2/C4D0BAQGl3ieIye-MeQ/company-logo_200_200/company-logo_200_200/0/1630481786896/mondragon_corporation_logo?e=2147483647&v=beta&t=87WN5hlqoKd3b2PTGBYs5qJHRIjm4TN1HZvxPH6eVXo" alt="MONDRAGON-X" width="100%" />
 </div>
 
 <h1 align="center">MONDRAGON-X</h1>
