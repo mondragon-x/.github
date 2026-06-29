@@ -3,10 +3,12 @@
 </div>
 
 <h1 align="center">MONDRAGON-X</h1>
-
 <p align="center">
   <em>Espacio de trabajo y repositorio central del proyecto Mondragon-X. Aquí gestionamos la infraestructura, componentes y casos de uso mediante arquitecturas basadas en contenedores.</em>
 </p>
+<p align="center">Proyecto  cofinanciado por el Ministerio para la Transformación Digital y de la Función Pública con cargo a los fondos del Mecanismo de Recuperación y Resiliencia de la Unión Europea, bajo el programa UNICO IPCEI Indirectos y con el número de expediente TSI-063400-2024-001. </p>
+
+
 
 ---
 
